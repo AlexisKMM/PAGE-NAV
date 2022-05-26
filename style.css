@@ -1,0 +1,157 @@
+:root {
+    --colorBase: #373F41;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* ---------------------- CSS-GENERAL -------------------------- */
+
+a { text-decoration: none; }
+li { list-style: none; }
+
+.boxshadow { box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%); }
+
+/* --------------------------NAV ----------------------------- */
+
+.navContent {width: 100%;}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar_fijo {
+    position: fixed;
+    top: 0;
+}
+
+.navbar_logo_img {
+    width: 60px;
+    height: 60px;
+    object-fit: scale-down;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.list_a {
+    font-size: 1rem;
+    color: #232330;
+}
+
+#toggler,
+.navbar_label {
+    display: none;
+}
+
+.fa-bars {
+    font-size: 1.4rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.enlaces_1 {
+    background-color: #232330;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.enlaces_2 {
+    background-color: #eee;
+    color: #232330;
+    padding: 10px 20px;
+}
+
+.section1 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #373F41;
+}
+
+.section2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2323;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar_label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .enlaces {
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+
+/* --------------------------BANNER ----------------------------- */
+
+.banner {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #232330;
+    color: #fff;
+}
+
+.banner p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.fa-phone { font-size: 0.6rem;}
+
+/* ---------------------- coverPage -------------------------- */
+
+.portada {
+    width: 100%;
+    min-height: 100vh;
+    background-position: top;
+    background-size: cover;
+    background-color: #eee;
+    background-repeat: no-repeat;
+}
